@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulario</title>
+        <style>
+
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                background: white;
+            }
+            #contenedor{
+                width: 100%;
+                overflow: auto;
+                background: lavender;
+                max-width: 550px;
+                margin: auto;
+                z-index: 2;
+                position: relative;
+
+            }
+            .formulario{
+                float: left;
+                width: 50%;
+                padding: 5px;
+                margin-top: 20px;
+            }
+            .revista{
+                float:left;
+                width: 50%;
+                padding: 5px;
+            }
+            .revista img {
+                width: 100%;
+                border-radius: 5px;
+                border: solid black 2px;
+            }
+            #final{
+                max-width: 225px;
+                margin: auto;
+                height: 50%;
+                max-height: 150px;
+                margin-bottom: 10px;
+                position: relative;
+
+            }
+            .pequenio{
+                width: 70px;
+            }
+            .condiciones{ 
+            }
+            input[type="submit"]{
+                background: green;
+                padding: 10px 20px;
+                font-weight: bold;
+                color: white;
+                border: none;
+                border-radius: 30px;
+            }
+            td{
+                padding: px;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div id="final">
+            <img src="Imagenes/Logo.jpeg">
+        </div>
+        <div id="contenedor">
+            <div class="revista">
+                <img src="Imagenes/revista.jpeg">
+            </div>
+            <div class="formulario">
+                <form method="post" action="http://www.cursos-diseno.es/mi-mail.php">
+                    <table>
+                        <tr>
+                            <td>Nombre*</td>
+                            <td><input type="text" name="nombre" style="width: 150px;" class="mediano" autofocus required></td>
+                        </tr>
+                        <tr>
+                            <td>Apellidos*</td>
+                            <td> <input type="text" name="apellidos" required></td>
+                        </tr>
+                        <tr>
+                            <td>Dirección*</td>
+                            <td> <input type="text" name="Calle" required></td>
+                        </tr> 
+                        <tr>
+                            <td>Población*</td>
+                            <td> <input type="text" name="población" required></td>
+                        </tr> 
+                        <tr>
+                            <td>Provincia</td>
+                            <td>
+                                <select name="provincia" required>
+                                    <option value="">Elige</option>
+                                    <option value="01">Álava</option>
+                                    <option value="02">Albacete</option>
+                                    <option value="03">Alicante</option>
+                                    <option value="04">Almería</option>
+                                    <option value="05">Ávila</option>
+                                    <option value="06">Badajoz</option>
+                                    <option value="07">Baleares</option>
+                                    <option value="08">Barcelona</option>
+                                    <option value="09">Burgos</option>
+                                    <option value="10">Cáceres</option>
+                                    <option value="11">Cádiz</option>
+                                    <option value="12">Castellón</option>
+                                    <option value="13">Ciudad Real</option>
+                                    <option value="14">Córdoba</option>
+                                    <option value="15">Coruña</option>
+                                    <option value="16">Cuenca</option>
+                                    <option value="17">Girona</option>
+                                    <option value="18">Granada</option>
+                                    <option value="19">Guadalajara</option>
+                                    <option value="20">Guipúzcoa</option>
+                                    <option value="21">Huelva</option>
+                                    <option value="22">Huesca</option>
+                                    <option value="23">Jaén</option>
+                                    <option value="24">León</option>
+                                    <option value="25">Lleida</option>
+                                    <option value="26">La Rioja</option>
+                                    <option value="27">Lugp</option>
+                                    <option value="28">Madrid</option>
+                                    <option value="29">Málaga</option>
+                                    <option value="30">Murcia</option>
+                                    <option value="31">Navarra</option>
+                                    <option value="32">Ourense</option>
+                                    <option value="33">Oviedo</option>
+                                    <option value="34">Palencia</option>
+                                    <option value="35">Las Palmas</option>
+                                    <option value="36">Pontevedra</option>
+                                    <option value="37">Salamanca</option>
+                                    <option value="38">Santa Cruz Tenerife</option>
+                                    <option value="39">Santander</option>
+                                    <option value="40">Segovia</option>
+                                    <option value="41">Sevilla</option>
+                                    <option value="42">Soria</option>
+                                    <option value="43">Tarragona</option>
+                                    <option value="44">Teruel</option>
+                                    <option value="45">Toledo</option>
+                                    <option value="46">Valencia</option>
+                                    <option value="47">Valladolid</option>
+                                    <option value="48">Vizcaya</option>
+                                    <option value="49">Zamora</option>
+                                    <option value="50">Zaragoza</option>
+                                    <option value="51">Ceuta</option>
+                                    <option value="52">Melilla</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>C. Postal*</td>
+                            <td> <input type="number" name="C.P" class="pequenio" maxlength="5" required></td>
+                        </tr>
+
+                        <tr>
+                            <td>Email*</td>
+                            <td><input type="email" name="email" placeholder="correo@email.com" required></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="condiciones">
+                                <label><input type="checkbox" name="condiciones" required value="si">Acepto los términos <br> y condiciones*</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="hidden" name="destinatario" value="ivan_gonzalez_tsapp1oa2021@cev.com"></td>
+                            <td><input type="submit"></td>
+                        </tr>
+                    </table>
+                </form>
+
+            </div>
+        </div>
+
+    </body>
+</html>
